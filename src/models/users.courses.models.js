@@ -19,6 +19,9 @@ const UsersCourses = db.define("users_courses", {
     allowNull: false,
     field: "course_id",
   },
-});
+},
+  {
+    timestamps: false,
+  });
 
 module.exports = UsersCourses;

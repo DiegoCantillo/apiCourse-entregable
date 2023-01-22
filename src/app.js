@@ -5,6 +5,7 @@ const userRoutes = require("./routes/users.router");
 const videoRouter = require("./routes/videos.router");
 const categoriesRouter = require('./routes/categories.router');
 const coursesRouter = require('./routes/courses.routers');
+const usersCoursesRouter = require('./routes/usersCourses.router');
 
 const app = express();
 
@@ -23,7 +24,7 @@ app.get("/", (req, res) => {
 });
 
 app.use(express.json());
-app.use("/api/v1", userRoutes, videoRouter, categoriesRouter, coursesRouter);
+app.use("/api/v1", userRoutes, videoRouter, categoriesRouter, coursesRouter, usersCoursesRouter);
 
 const PORT = 7000;
 app.listen(PORT, () => {

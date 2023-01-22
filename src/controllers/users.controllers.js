@@ -42,7 +42,8 @@ const createUsers = async (req, res) => {
 const userUpdate = async (req, res) => {
   try {
     const { id } = req.params;
-    const field = req.body;
+    const { firstName, lastName, password } = req.body;
+    const field = { firstName, lastName, password }
     const result = await UserServices.updateUser(id, field);
     res.json(result);
   } catch (error) {

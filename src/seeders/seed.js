@@ -27,10 +27,9 @@ const users = [
 ];
 
 const usersCourses = [
-  { userId: 1, courseId: 2 },
+  { userId: 1, courseId: 3 },
   { userId: 2, courseId: 2 },
-  { userId: 2, courseId: 3 },
-  { userId: 3, courseId: 3 },
+  { userId: 3, courseId: 1 },
 ];
 
 const courses = [
@@ -52,9 +51,9 @@ const courses = [
 ];
 
 const categories = [
-  { name: "facil" },
-  { name: "intermedio" },
-  { name: "avanzado" }
+  { name: "facil", courseId: 1 },
+  { name: "intermedio", courseId: 2 },
+  { name: "avanzado", courseId: 3 }
 ]
 
 const videos = [

@@ -11,10 +11,10 @@ const initModels = () => {
   Courses.hasMany(UsersCourses, { as: "author", foreignKey: "course_id" });
 
   Categories.belongsTo(Courses, { as: "category", foreignKey: "course_id" });
-  Courses.hasMany(Categories, { as: "categories", foreignKey: "course_id" });
+  Courses.hasMany(Categories, { as: "category", foreignKey: "course_id" });
 
-  Videos.belongsTo(Courses, { as: "courses", foreignKey: "course_id" });
-  Courses.hasMany(Videos, { as: "videos", foreignKey: "course_id" });
+  Videos.belongsTo(Courses, { as: "course", foreignKey: "course_id" });
+  Courses.hasMany(Videos, { as: "video", foreignKey: "course_id" });
 };
 
 module.exports = initModels;
