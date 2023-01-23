@@ -32,7 +32,8 @@ const createCourses = async (req, res) => {
 const updateCourses = async (req, res) => {
     try {
         const { id } = req.params;
-        const field = req.body;
+        const { description } = req.body;
+        const field = { description };
         const result = await coursesServices.coursesUpdated(id, field);
         res.json(result)
     } catch (error) {
